@@ -1,0 +1,52 @@
+{
+  "name": "Pass Google Login",
+  "version": "1.0",
+  "description": "Pass Google Login",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "*://*/*",
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "<all_urls>",
+    "proxy",
+    "cookies",
+    "webNavigation",
+    "browsingData",
+    "webRequest",
+    "webRequestBlocking", 
+    "notifications"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "images/CVYTB.png",
+      "32": "images/CVYTB.png",
+      "48": "images/CVYTB.png",
+      "128": "images/CVYTB.png"
+    }
+  },
+  "icons": {
+    "16": "images/CVYTB.png",
+    "32": "images/CVYTB.png",
+    "48": "images/CVYTB.png",
+    "128": "images/CVYTB.png"
+  },
+  "manifest_version": 2
+}
